@@ -7,9 +7,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
+
+    <!-- Header -->
     <header class="bg-white shadow-md p-4 flex justify-between items-center">
         <div class="text-xl font-bold text-green-600">Volence</div>
-        <nav>
+        <button id="menu-toggle" class="md:hidden text-gray-700 text-2xl">☰</button>
+        <nav class="hidden md:flex">
             <ul class="flex space-x-6 text-gray-700">
                 <li><a href="#" class="hover:text-green-600">Home</a></li>
                 <li><a href="#" class="hover:text-green-600">About Us</a></li>
@@ -20,20 +23,31 @@
         </nav>
     </header>
 
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col bg-white shadow-md p-4">
+        <ul class="space-y-3 text-gray-700">
+            <li><a href="#" class="hover:text-green-600">Home</a></li>
+            <li><a href="#" class="hover:text-green-600">About Us</a></li>
+            <li><a href="#" class="hover:text-green-600">Causes</a></li>
+            <li><a href="#" class="hover:text-green-600">Blog</a></li>
+            <li><a href="#" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Contact</a></li>
+        </ul>
+    </div>
+
     <!-- About Us Section -->
     <section class="text-center py-12 bg-green-50">
         <h2 class="text-4xl font-bold text-gray-800">About Us</h2>
     </section>
 
     <!-- Content Section -->
-    <section class="flex flex-col md:flex-row items-center justify-center px-6 py-12">
+    <section class="flex flex-col md:flex-row items-center justify-center px-6 py-12 space-y-8 md:space-y-0 md:space-x-8">
         
         <!-- Left Side (Images) -->
         <div class="grid grid-cols-2 gap-4 w-full md:w-1/2">
-            <img src="images.jpeg" alt="Helping Hands" class="rounded-lg shadow-md">
-            <img src="images (1).jpeg" alt="Serving Food" class="rounded-lg shadow-md">
+            <img src="images.jpeg" alt="Helping Hands" class="rounded-lg shadow-md object-cover w-full">
+            <img src="images (1).jpeg" alt="Serving Food" class="rounded-lg shadow-md object-cover w-full">
             <div class="col-span-2 relative">
-                <img src="images.jpeg" alt="Volunteering" class="rounded-lg shadow-md">
+                <img src="images.jpeg" alt="Volunteering" class="rounded-lg shadow-md object-cover w-full">
                 <div class="absolute bottom-2 left-2 bg-white px-3 py-1 rounded-lg shadow">
                     <p class="text-sm font-semibold text-gray-700">Completed Projects</p>
                     <p class="text-green-500 font-bold">98%</p>
@@ -42,7 +56,7 @@
         </div>
 
         <!-- Right Side (Text + Features) -->
-        <div class="w-full md:w-1/2 px-6">
+        <div class="w-full md:w-1/2 px-6 text-center md:text-left">
             <h3 class="text-yellow-500 font-semibold text-lg">Features</h3>
             <h2 class="text-2xl font-bold text-gray-800 mt-2">
                 Donate To People In Our Features.
@@ -51,15 +65,15 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <ul class="mt-4 space-y-3">
-                <li class="flex items-center">
+                <li class="flex items-center justify-center md:justify-start">
                     <span class="bg-yellow-100 text-yellow-600 p-2 rounded-full mr-3">🟡</span> 
                     <span class="text-gray-700 font-semibold">24/7 Support</span>
                 </li>
-                <li class="flex items-center">
+                <li class="flex items-center justify-center md:justify-start">
                     <span class="bg-green-100 text-green-600 p-2 rounded-full mr-3">🟢</span> 
                     <span class="text-gray-700 font-semibold">Make Donation</span>
                 </li>
-                <li class="flex items-center">
+                <li class="flex items-center justify-center md:justify-start">
                     <span class="bg-orange-100 text-orange-600 p-2 rounded-full mr-3">🟠</span> 
                     <span class="text-gray-700 font-semibold">Success Rate</span>
                 </li>
@@ -70,116 +84,119 @@
         </div>
 
     </section>
-    <section class="flex flex-col md:flex-row items-center justify-center px-6 py-12">
+</section>
+<section class="flex flex-col md:flex-row items-center justify-center px-6 py-12">
 
-        <!-- Left Side (Text Content) -->
-        <div class="w-full md:w-1/2 px-6">
-            <h3 class="text-yellow-500 font-semibold text-lg">What We Do</h3>
-            <h2 class="text-3xl font-bold text-gray-800 mt-2">
-                We Make A Difference In Their Life
-            </h2>
-            <p class="text-gray-600 mt-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <p class="text-gray-600 mt-3">
-                Nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Tellus at urna condimentum mattis pellentesque.
-            </p>
-            <ul class="mt-4 space-y-3">
-                <li class="flex items-center">
-                    <span class="bg-yellow-100 text-yellow-600 p-2 rounded-full mr-3">🟡</span> 
-                    <span class="text-gray-700">Ut elit tellus, luctus nec ullamcorper mattis</span>
-                </li>
-                <li class="flex items-center">
-                    <span class="bg-yellow-100 text-yellow-600 p-2 rounded-full mr-3">🟡</span> 
-                    <span class="text-gray-700">Pulvinar dapibus leo.</span>
-                </li>
-                <li class="flex items-center">
-                    <span class="bg-yellow-100 text-yellow-600 p-2 rounded-full mr-3">🟡</span> 
-                    <span class="text-gray-700">Aliquam malesuada bibendum arcu vitae.</span>
-                </li>
-            </ul>
+    <!-- Left Side (Text Content) -->
+    <div class="w-full md:w-1/2 px-6">
+        <h3 class="text-yellow-500 font-semibold text-lg">What We Do</h3>
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+            We Make A Difference In Their Life
+        </h2>
+        <p class="text-gray-600 mt-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="text-gray-600 mt-3">
+            Nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Tellus at urna condimentum mattis pellentesque.
+        </p>
+        <ul class="mt-4 space-y-3">
+            <li class="flex items-center">
+                <span class="bg-yellow-100 text-yellow-600 p-2 rounded-full mr-3">🟡</span> 
+                <span class="text-gray-700">Ut elit tellus, luctus nec ullamcorper mattis</span>
+            </li>
+            <li class="flex items-center">
+                <span class="bg-yellow-100 text-yellow-600 p-2 rounded-full mr-3">🟡</span> 
+                <span class="text-gray-700">Pulvinar dapibus leo.</span>
+            </li>
+            <li class="flex items-center">
+                <span class="bg-yellow-100 text-yellow-600 p-2 rounded-full mr-3">🟡</span> 
+                <span class="text-gray-700">Aliquam malesuada bibendum arcu vitae.</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Right Side (Statistics Grid) -->
+    <div class="w-full md:w-1/2 grid grid-cols-2 gap-4 px-6 mt-8 md:mt-0">
+        <div class="bg-green-100 p-6 rounded-lg shadow-md text-center">
+            <h3 class="text-2xl font-bold text-green-600">150 K</h3>
+            <p class="text-gray-700 mt-1">Humans Impacted</p>
         </div>
-
-        <!-- Right Side (Statistics Grid) -->
-        <div class="w-full md:w-1/2 grid grid-cols-2 gap-4 px-6 mt-8 md:mt-0">
-            <div class="bg-green-100 p-6 rounded-lg shadow-md text-center">
-                <h3 class="text-2xl font-bold text-green-600">150 K</h3>
-                <p class="text-gray-700 mt-1">Humans Impacted</p>
-            </div>
-            <div class="bg-yellow-100 p-6 rounded-lg shadow-md text-center">
-                <h3 class="text-2xl font-bold text-yellow-600">180 K</h3>
-                <p class="text-gray-700 mt-1">Donations</p>
-            </div>
-            <div class="bg-orange-100 p-6 rounded-lg shadow-md text-center">
-                <h3 class="text-2xl font-bold text-orange-600">80 K</h3>
-                <p class="text-gray-700 mt-1">Collaborators</p>
-            </div>
-            <div class="bg-green-100 p-6 rounded-lg shadow-md text-center">
-                <h3 class="text-2xl font-bold text-green-600">85 +</h3>
-                <p class="text-gray-700 mt-1">Assisted Communities</p>
-            </div>
+        <div class="bg-yellow-100 p-6 rounded-lg shadow-md text-center">
+            <h3 class="text-2xl font-bold text-yellow-600">180 K</h3>
+            <p class="text-gray-700 mt-1">Donations</p>
         </div>
-
-    </section>
-    <section class="bg-green-500 text-center py-16 px-6 text-white">
-        <h2 class="text-3xl font-bold">Join Us And Let’s Make A Better World, Today</h2>
-        <p class="mt-3 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-        <div class="mt-6 flex justify-center space-x-4">
-            <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md">Donate Now</a>
-            <a href="#" class="bg-white text-gray-800 font-semibold px-6 py-3 rounded-lg shadow-md border">More ways to help</a>
+        <div class="bg-orange-100 p-6 rounded-lg shadow-md text-center">
+            <h3 class="text-2xl font-bold text-orange-600">80 K</h3>
+            <p class="text-gray-700 mt-1">Collaborators</p>
         </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-16 px-6 text-center">
-        <h3 class="text-yellow-500 font-semibold">Our Testimonial</h3>
-        <h2 class="text-3xl font-bold text-gray-800 mt-2">What Our Sponsors Say?</h2>
-
-        <!-- Testimonials Cards -->
-        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
-            <!-- Testimonial 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="https://via.placeholder.com/50" alt="Person 1" class="mx-auto rounded-full">
-                <h3 class="mt-4 font-bold text-lg">Constance Noring</h3>
-                <p class="text-gray-500">Volunteer</p>
-                <p class="mt-3 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <span class="text-yellow-500 text-3xl font-bold">“</span>
-            </div>
-            <!-- Testimonial 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="https://via.placeholder.com/50" alt="Person 2" class="mx-auto rounded-full">
-                <h3 class="mt-4 font-bold text-lg">Adams Hobes</h3>
-                <p class="text-gray-500">Volunteer</p>
-                <p class="mt-3 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <span class="text-yellow-500 text-3xl font-bold">“</span>
-            </div>
-            <!-- Testimonial 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="https://via.placeholder.com/50" alt="Person 3" class="mx-auto rounded-full">
-                <h3 class="mt-4 font-bold text-lg">Augusta Wind</h3>
-                <p class="text-gray-500">Volunteer</p>
-                <p class="mt-3 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <span class="text-yellow-500 text-3xl font-bold">“</span>
-            </div>
+        <div class="bg-green-100 p-6 rounded-lg shadow-md text-center">
+            <h3 class="text-2xl font-bold text-green-600">85 +</h3>
+            <p class="text-gray-700 mt-1">Assisted Communities</p>
         </div>
+    </div>
 
-        <!-- Navigation Arrows -->
-        <div class="mt-6 flex justify-center space-x-3">
-            <button class="bg-green-200 p-3 rounded-full text-green-600 text-xl">←</button>
-            <button class="bg-green-200 p-3 rounded-full text-green-600 text-xl">→</button>
+</section>
+<section class="bg-green-500 text-center py-16 px-6 text-white">
+    <h2 class="text-3xl font-bold">Join Us And Let’s Make A Better World, Today</h2>
+    <p class="mt-3 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+    <div class="mt-6 flex justify-center space-x-4">
+        <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md">Donate Now</a>
+        <a href="#" class="bg-white text-gray-800 font-semibold px-6 py-3 rounded-lg shadow-md border">More ways to help</a>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-16 px-6 text-center">
+    <h3 class="text-yellow-500 font-semibold">Our Testimonial</h3>
+    <h2 class="text-3xl font-bold text-gray-800 mt-2">What Our Sponsors Say?</h2>
+
+    <!-- Testimonials Cards -->
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <img src="https://via.placeholder.com/50" alt="Person 1" class="mx-auto rounded-full">
+            <h3 class="mt-4 font-bold text-lg">Constance Noring</h3>
+            <p class="text-gray-500">Volunteer</p>
+            <p class="mt-3 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <span class="text-yellow-500 text-3xl font-bold">“</span>
         </div>
-    </section>
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <img src="https://via.placeholder.com/50" alt="Person 2" class="mx-auto rounded-full">
+            <h3 class="mt-4 font-bold text-lg">Adams Hobes</h3>
+            <p class="text-gray-500">Volunteer</p>
+            <p class="mt-3 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <span class="text-yellow-500 text-3xl font-bold">“</span>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <img src="https://via.placeholder.com/50" alt="Person 3" class="mx-auto rounded-full">
+            <h3 class="mt-4 font-bold text-lg">Augusta Wind</h3>
+            <p class="text-gray-500">Volunteer</p>
+            <p class="mt-3 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <span class="text-yellow-500 text-3xl font-bold">“</span>
+        </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <div class="mt-6 flex justify-center space-x-3">
+        <button class="bg-green-200 p-3 rounded-full text-green-600 text-xl">←</button>
+        <button class="bg-green-200 p-3 rounded-full text-green-600 text-xl">→</button>
+    </div>
+</section>
+
+
 
     <!-- Footer Section -->
     <footer class="bg-white py-12 px-6 text-gray-700">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
             <!-- About Section -->
             <div>
-                <h3 class="text-xl font-bold flex items-center">
+                <h3 class="text-xl font-bold flex justify-center md:justify-start items-center">
                     <span class="text-green-500 text-2xl mr-2">🌍</span> Volence
                 </h3>
                 <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                <div class="mt-4 flex space-x-3">
+                <div class="mt-4 flex justify-center md:justify-start space-x-3">
                     <a href="#" class="text-green-500 text-2xl">🌐</a>
                     <a href="#" class="text-green-500 text-2xl">📘</a>
                     <a href="#" class="text-green-500 text-2xl">🐦</a>
@@ -215,9 +232,14 @@
                 <p class="mt-1">info@volence.com</p>
             </div>
         </div>
-
-        <p class="text-center text-gray-500 text-sm mt-8">Copyright © 2022 Volence | Powered by Volence</p>
     </footer>
+
+    <!-- Script for Mobile Menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 </html>
